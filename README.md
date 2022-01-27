@@ -2,13 +2,13 @@
 Big bot is a six-wheeled robot used to generate a 3D map simulation  of a V-shaped cave structure
 
 
-# 1.Prerequisites
+# 1. Prerequisites
 * teleop_twist_keyboard package; source: http://wiki.ros.org/teleop_twist_keyboardhttp://wiki.ros.org/teleop_twist_keyboard
 * ouster_example package; source: https://github.com/ouster-lidar/ouster_example
 * octomap_server package; source: https://github.com/OctoMap/octomap_mapping
 
 
-# 2.Installing the package
+# 2. Installing the package
 * git clone the package into your catkin_ws/src (or whatever you named your ros workspace) using the following line in the terminal
 
   ```git clone https://github.com/AntarCreates/big_bot_description.git```
@@ -16,14 +16,14 @@ Big bot is a six-wheeled robot used to generate a 3D map simulation  of a V-shap
   ```catkin_make```
 * Source the bash file using ```source devel/setup.bash```
 
-# 3.Verify installation
+# 3. Verify installation
 * Run the following coomand to bring up Big bot in gazebo
 
   ``` roslaunch big_bot_description gazebo.launch```
 
 ## And you are pretty much set!
 
-# 4.Setting up the environment
+# 4. Setting up the environment
 * Press the "insert" option in gazebo
 * If you have everything set up adequately, you should find two objects by the following names under the "models used" folder on the left plane inside gazebo
   * Cave Corner 01 Type B
