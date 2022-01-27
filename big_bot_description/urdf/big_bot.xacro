@@ -1,0 +1,479 @@
+<?xml version="1.0" ?>
+<robot name="big_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find big_bot_description)/urdf/materials.xacro" />
+<!-- <xacro:include filename="$(find big_bot_description)/urdf/big_bot.trans" /> -->
+
+<xacro:include filename="$(find big_bot_description)/gazebo/big_bot_description_materials.gazebo" />
+<xacro:include filename="$(find big_bot_description)/gazebo/big_bot_description_physics.gazebo" />
+<xacro:include filename="$(find big_bot_description)/gazebo/big_bot_description_plugins.gazebo" />
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0011053228922126006 -0.026924206803117964 0.3959361322214379"/>
+    <mass value="184.49373888112405"/>
+    <inertia ixx="49.458199" ixy="0.236093" ixz="-0.059576" iyy="80.257636" iyz="-0.843307" izz="110.187792"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.7658954039907791e-16 1.3734742031039391e-16 0.047014448995088665"/>
+    <mass value="1.3952248482751741"/>
+    <inertia ixx="0.007137" ixy="-0.0" ixz="-0.0" iyy="0.007137" iyz="0.0" izz="0.009989"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.861786"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.861786"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lid_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.55 -2.299357713120287e-07"/>
+    <mass value="64.19200127860375"/>
+    <inertia ixx="6.476037" ixy="0.0" ixz="0.0" iyy="20.586036" iyz="0.0" izz="27.055386"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.55 -0.505893"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/lid_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.55 -0.505893"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/lid_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="kinect_rotate_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.5196529551685387e-07 -0.5500000000000002 -0.0033325787167008958"/>
+    <mass value="2.299282429816022"/>
+    <inertia ixx="0.324065" ixy="0.0" ixz="-0.0" iyy="0.000637" iyz="-0.0" izz="0.324203"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.902056 -0.55 -0.685322"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/kinect_rotate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.902056 -0.55 -0.685322"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/kinect_rotate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="w1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.1102230246251565e-16 -0.06999999999999995 0.0"/>
+    <mass value="16.371506609951567"/>
+    <inertia ixx="0.117884" ixy="-0.0" ixz="-0.0" iyy="0.182289" iyz="-0.0" izz="0.117884"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.75 -0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.75 -0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.3306690738754696e-16 0.07000000000000006 6.938893903907228e-16"/>
+    <mass value="0.33988478394632043"/>
+    <inertia ixx="0.006343" ixy="0.0" ixz="0.0" iyy="0.011576" iyz="0.0" izz="0.006343"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.75 -0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.75 -0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="w2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.4030595189091785e-16 -0.07000000000000017 2.7755575615628914e-17"/>
+    <mass value="16.371506609951563"/>
+    <inertia ixx="0.117884" ixy="0.0" ixz="0.0" iyy="0.182289" iyz="-0.0" izz="0.117884"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="7.706566650891081e-17 0.06999999999999995 4.996003610813204e-16"/>
+    <mass value="0.33988478394632043"/>
+    <inertia ixx="0.006343" ixy="-0.0" ixz="0.0" iyy="0.011576" iyz="0.0" izz="0.006343"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="w3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 -0.06999999999999995 0.0"/>
+    <mass value="16.371506609951567"/>
+    <inertia ixx="0.117884" ixy="-0.0" ixz="0.0" iyy="0.182289" iyz="-0.0" izz="0.117884"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.75 -0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.75 -0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.440892098500626e-16 0.06999999999999995 4.996003610813204e-16"/>
+    <mass value="0.33988478394632043"/>
+    <inertia ixx="0.006343" ixy="-0.0" ixz="0.0" iyy="0.011576" iyz="0.0" izz="0.006343"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.75 -0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.75 -0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="w4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.1102230246251565e-16 0.06999999999999995 0.0"/>
+    <mass value="16.371506609951567"/>
+    <inertia ixx="0.117884" ixy="-0.0" ixz="-0.0" iyy="0.182289" iyz="0.0" izz="0.117884"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.75 0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.75 0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.3306690738754696e-16 -0.07000000000000028 6.938893903907228e-16"/>
+    <mass value="0.33988478394632043"/>
+    <inertia ixx="0.006343" ixy="-0.0" ixz="0.0" iyy="0.011576" iyz="-0.0" izz="0.006343"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.75 0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.75 0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="w5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.4030595189091785e-16 0.07000000000000006 2.7755575615628914e-17"/>
+    <mass value="16.371506609951563"/>
+    <inertia ixx="0.117884" ixy="-0.0" ixz="0.0" iyy="0.182289" iyz="0.0" izz="0.117884"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="7.706566650891081e-17 -0.06999999999999984 4.996003610813204e-16"/>
+    <mass value="0.33988478394632043"/>
+    <inertia ixx="0.006343" ixy="-0.0" ixz="0.0" iyy="0.011576" iyz="0.0" izz="0.006343"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="w6_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.06999999999999995 0.0"/>
+    <mass value="16.371506609951567"/>
+    <inertia ixx="0.117884" ixy="0.0" ixz="0.0" iyy="0.182289" iyz="0.0" izz="0.117884"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.75 0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.75 0.8 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/w6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="t6_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.440892098500626e-16 -0.07000000000000028 4.996003610813204e-16"/>
+    <mass value="0.33988478394632043"/>
+    <inertia ixx="0.006343" ixy="0.0" ixz="0.0" iyy="0.011576" iyz="-0.0" izz="0.006343"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.75 0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.75 0.66 -0.2"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/t6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="kinect_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02022286932267714 0.0005576148289877128 0.02823235974256022"/>
+    <mass value="4.334636679065321"/>
+    <inertia ixx="0.021339" ixy="0.000136" ixz="-8.4e-05" iyy="0.002524" iyz="1.7e-05" izz="0.02246"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.902056 -0.0 -0.699941"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/kinect_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.902056 -0.0 -0.699941"/>
+    <geometry>
+      <mesh filename="package://big_bot_description/meshes/kinect_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="lidar_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.861786"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="lid_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.55 0.505893"/>
+  <parent link="base_link"/>
+  <child link="lid_1"/>
+</joint>
+
+<joint name="rotate_kinect" type="fixed">
+  <origin rpy="0 0 0" xyz="0.902056 0.55 0.685322"/>
+  <parent link="base_link"/>
+  <child link="kinect_rotate_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="m1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.75 0.8 0.2"/>
+  <parent link="base_link"/>
+  <child link="w1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="mt1" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.14 0.0"/>
+  <parent link="w1_1"/>
+  <child link="t1_1"/>
+</joint>
+
+<joint name="m2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.8 0.2"/>
+  <parent link="base_link"/>
+  <child link="w2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="mt2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.14 0.0"/>
+  <parent link="w2_1"/>
+  <child link="t2_1"/>
+</joint>
+
+<joint name="m3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.75 0.8 0.2"/>
+  <parent link="base_link"/>
+  <child link="w3_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="mt3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.14 0.0"/>
+  <parent link="w3_1"/>
+  <child link="t3_1"/>
+</joint>
+
+<joint name="m4" type="continuous">
+  <origin rpy="0 0 0" xyz="0.75 -0.8 0.2"/>
+  <parent link="base_link"/>
+  <child link="w4_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="mt4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.14 0.0"/>
+  <parent link="w4_1"/>
+  <child link="t4_1"/>
+</joint>
+
+<joint name="m5" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.8 0.2"/>
+  <parent link="base_link"/>
+  <child link="w5_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="mt5" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.14 0.0"/>
+  <parent link="w5_1"/>
+  <child link="t5_1"/>
+</joint>
+
+<joint name="m6" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.75 -0.8 0.2"/>
+  <parent link="base_link"/>
+  <child link="w6_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="mt6" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.14 0.0"/>
+  <parent link="w6_1"/>
+  <child link="t6_1"/>
+</joint>
+
+<joint name="kinect_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 -0.55 0.014619"/>
+  <parent link="kinect_rotate_1"/>
+  <child link="kinect_1"/>
+</joint>
+
+<!-- ##### Kinect fix ############# -->
+<joint name="camera_rgb_joint" type="fixed">
+  <origin xyz="0.15 0 0" rpy="1.57079 0 1.57079"/>
+  <parent link="kinect_1"/>
+  <child link="camera_rgbd_frame" />
+</joint>
+<link name="camera_rgbd_frame"/>
+
+</robot>

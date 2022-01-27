@@ -1,0 +1,51 @@
+   <!-- Gazebo requires the ouster_gazebo_plugins package -->
+<!--     <gazebo reference="lidar_1">
+        <sensor type="ray" name="lidar_1-OS1-64">
+          <pose>0 0 0 0 0 0</pose>
+          <visualize>1</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>512</samples>
+                <resolution>1</resolution>
+                <min_angle>-${M_PI}</min_angle>
+                <max_angle>${M_PI} </max_angle>
+              </horizontal>
+              <vertical>
+                <samples>64</samples>
+                <resolution>1</resolution>
+                <min_angle>-.26</min_angle>
+                <max_angle>.26</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.9</min>
+              <max>75</max>
+              <resolution>0.03</resolution>
+            </range>
+          </ray>
+          <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_ouster_laser.so">
+            <topicName>/os1_cloud_node/points</topicName>
+            <frameName>lidar_1</frameName>
+            <min_range>0.9</min_range>
+            <max_range>75</max_range>
+            <gaussianNoise>0.008</gaussianNoise>
+          </plugin>
+        </sensor>
+    </gazebo>
+
+  <gazebo>
+    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+      <robotNamespace>/</robotNamespace>
+      <updateRate>100.0</updateRate> 
+      <bodyName>base_link</bodyName>
+      <topicName>/os1_cloud_node/imu</topicName>
+      <accelDrift>0.005 0.005 0.005</accelDrift>
+      <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
+      <rateDrift>0.005 0.005 0.005 </rateDrift>
+      <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
+      <headingDrift>0.005</headingDrift>
+      <headingGaussianNoise>0.005</headingGaussianNoise>
+    </plugin>
+  </gazebo> -->

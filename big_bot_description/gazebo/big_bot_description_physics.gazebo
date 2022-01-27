@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<robot name="big_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="std_friction" value="1.0" />
+<xacro:property name="dummy_friction" value="1.0" />
+
+
+<gazebo reference="base_link">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="lidar_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lid_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="kinect_rotate_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="w1_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t1_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="w2_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t2_1">
+
+  <mu1>${dummy_friction}</mu1>
+  <mu2>${dummy_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="w3_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t3_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="w4_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t4_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="w5_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t5_1">
+
+  <mu1>${dummy_friction}</mu1>
+  <mu2>${dummy_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="w6_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="t6_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="kinect_1">
+
+  <mu1>${std_friction}</mu1>
+  <mu2>${std_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>

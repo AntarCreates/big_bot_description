@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find big_bot_description)/launch/controller.yaml" command="load"/>
+<node args="rotate_kinect_position_controller m1_position_controller m2_position_controller m3_position_controller m4_position_controller m5_position_controller m6_position_controller joint_state_controller " name="controller_spawner" ns="big_bot" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/big_bot/joint_states"/>
+</node>
+
+</launch>

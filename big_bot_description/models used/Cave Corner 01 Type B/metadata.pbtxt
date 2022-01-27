@@ -1,0 +1,20 @@
+model {
+  file: "model.sdf"
+  file_format {
+    version {
+      major: 1
+      minor: 6
+    }
+    name: "sdf"
+  }
+}
+name: "Cave Corner 01"
+description: "Corner tile for cave environment."
+authors {
+  name: "Cole Biesemeyer"
+  email: "cole@openrobotics.org"
+}
+dependencies {
+  uri: "https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Cave Straight Type A"
+}
+

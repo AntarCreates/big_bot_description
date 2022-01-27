@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<robot name="big_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/FlatBlack" />
+<xacro:property name="sensor_color" value="Gazebo/DarkGrey" />
+<xacro:property name="wheel_color" value="Gazebo/DarkGrey" />
+<xacro:property name="lid_color" value="Gazebo/BlackTransparent" />
+
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${sensor_color}</material>
+
+</gazebo>
+
+<gazebo reference="lid_1">
+  <material>${lid_color}</material>
+
+</gazebo>
+
+<gazebo reference="kinect_rotate_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="w1_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="t1_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="w2_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="t2_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="w3_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="t3_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="w4_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="t4_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="w5_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="t5_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="w6_1">
+  <material>${wheel_color}</material>
+
+</gazebo>
+
+<gazebo reference="t6_1">
+  <material>${body_color}</material>
+
+</gazebo>
+
+<gazebo reference="kinect_1">
+  <material>${sensor_color}</material>
+
+</gazebo>
+
+</robot>
