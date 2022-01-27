@@ -91,7 +91,7 @@ https://user-images.githubusercontent.com/81281780/151400685-dbd324c9-f284-4c19-
 
   ```rosrun octomap_server octomap_saver -f <name of your map>.bt``` 
   
-# 6. Loading the map
+# 6. Loading the Map
 
 * To load or open the saved map, close the RViz using ``` Ctrl+c```  and run the following command in the terminal tab and add MarkerArray with the fixed frame set to "Odom"
 
