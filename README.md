@@ -17,7 +17,7 @@ Big bot is a six-wheeled robot used to generate a 3D map simulation  of a V-shap
 * Source the bash file using ```source devel/setup.bash```
 
 # 3. Verify Installation
-* Run the following coomand to bring up Big bot in gazebo
+* Run the following command to bring up Big bot in gazebo
 
   ``` roslaunch big_bot_description gazebo.launch```
 
@@ -45,7 +45,7 @@ The procedure can be subdivided into five (5) separate steps
 
   ```roslaunch big_bot_description display.launch```
   
-  This should being-up RViz, and you should find various options like robot model, Tf, etc. I recommend to uncheck the robot model box, as doing so keeps the map visualization          cleaner.
+  This should bring-up RViz, and you should find various options like robot model, Tf, etc. I recommend to uncheck the robot model box, as doing so keeps the map visualization          cleaner.
   
   *note: In case you don't have your system set up for removing the irritating need for sourcing it each time a new terminal is opened, you must run ```source devel/setup.bash``` every time you open a new tab in the terminal, which you will be doing a lot in the next few steps*
   
