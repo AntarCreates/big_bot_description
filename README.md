@@ -20,6 +20,10 @@ Big bot is a six-wheeled robot used to generate a 3D map simulation  of a V-shap
 * Run the following command to bring up Big bot in gazebo
 
   ``` roslaunch big_bot_description gazebo.launch```
+* This should bring up the robot in the Gazebo interface as depicted below-
+
+![Screenshot from 2022-01-30 18-38-49](https://user-images.githubusercontent.com/81281780/151689611-cf0d043e-ca5a-4b99-9533-68997f6261c3.png)
+
 
 ##                                                                  And you are pretty much set!
 
@@ -93,7 +97,9 @@ https://user-images.githubusercontent.com/81281780/151400685-dbd324c9-f284-4c19-
   
 # 6. Loading the Map
 
-* To load or open the saved map, close the RViz using ``` Ctrl+c```  and run the following command in the terminal tab and add MarkerArray with the fixed frame set to "Odom"
+* To load or open the saved map, close the RViz window using ``` Ctrl+c``` in the corresponding terminal tab and relaunch it using ```rosrun rviz rviz```
+* Add MarkerArray subscribing to the similar topic as before and set the fixed frame to be "Odom"
+* Run the following command in the terminal tab 
 
   ``` rosrun octomap_server octomap_server_node <name of your map>.bt``` 
   
